@@ -1,10 +1,7 @@
 ﻿using Easybuyservicene.Service.Bizs;
-using Easybuyservicene.Service.Dtos;
 using Easybuyservicene.Service.Dtos.User;
-using Easybuyservicene.Service.Model;
 using Easybuyservicene.Service.Model.Static;
 using Easybuyservicene.Service.Utilis;
-using Newegg.Oversea.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +9,33 @@ using System.Text;
 
 namespace Easybuyservicene.Service.Services.User
 {
-    public class UserService : ModuleServiceBases<UserDTO>
+    public class UserAddressService : ModuleServiceBases<UserAddressDTO>
     {
-        public override object OnGet(UserDTO request)
+        public override object OnDelete(UserAddressDTO request)
+        {
+            try
+            {
+                if (null != request)
+                {
+                    return UserAddressBiz.DeleteUserAddressInfo(request);
+                }
+                return ResponseStaticModel.PARAM_ERROR_MODEL;
+            }
+            catch (Exception ex)
+            {
+                ResponseStaticModel.SERVER_ERROR_MODEL.ResultEntity = ex.Message;
+                return ResponseStaticModel.SERVER_ERROR_MODEL;
+            }
+        }
+
+        public override object OnGet(UserAddressDTO request)
         {
             try
             {
                 if (null != request)
                 {
                     request.PagingInfo = ServiceUtils.GetDefaultPagingInfo(request.PagingInfo);
-                    return UserBiz.GetUserInfo(request);
+                    return UserAddressBiz.GetUserAddressInfo(request);
                 }
                 return ResponseStaticModel.PARAM_ERROR_MODEL;
             }
@@ -32,13 +46,13 @@ namespace Easybuyservicene.Service.Services.User
             }
         }
 
-        public override object OnPost(UserDTO request)
+        public override object OnPost(UserAddressDTO request)
         {
             try
             {
                 if (null != request)
                 {
-                    return UserBiz.AlterUserInfo(request);
+                    return UserAddressBiz.AlterUserAddressInfo(request);
                 }
                 return ResponseStaticModel.PARAM_ERROR_MODEL;
             }
@@ -49,13 +63,13 @@ namespace Easybuyservicene.Service.Services.User
             }
         }
 
-        public override object OnPut(UserDTO request)
+        public override object OnPut(UserAddressDTO request)
         {
             try
             {
                 if (null != request)
                 {
-                    return UserBiz.AddUserInfo(request);
+                    return UserAddressBiz.AddUserAddressInfo(request);
                 }
                 return ResponseStaticModel.PARAM_ERROR_MODEL;
             }

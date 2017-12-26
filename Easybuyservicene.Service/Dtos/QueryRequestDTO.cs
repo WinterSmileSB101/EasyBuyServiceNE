@@ -10,6 +10,6 @@ namespace Easybuyservicene.Service.Dtos
     public class QueryRequestDTO<T> where T :new()
     {
         public T RequestEntity { get; set; }
-        
+        public PagingInfoEntity PagingInfo { get; set; }
     }
 }

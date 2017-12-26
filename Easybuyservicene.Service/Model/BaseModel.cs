@@ -1,12 +1,11 @@
-﻿using Newegg.Oversea.DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Easybuyservicene.Service.Dtos
+namespace Easybuyservicene.Service.Model
 {
-    public class BaseDTO
+    public class BaseModel
     {
         public DateTime? InDate { get; set; }
 
@@ -15,7 +14,5 @@ namespace Easybuyservicene.Service.Dtos
         public DateTime? LastEditDate { get; set; }
 
         public string LastEditUser { get; set; }
-
-        public PagingInfoEntity PagingInfo { get; set; }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Easybuyservicene.Service.Dtos
 {
-    public class QueryResponseDTO<T> where T:new()
+    public class QueryResponseDTO<T>
     {
         public int Code { get; set; }
         public string Message { get; set; }

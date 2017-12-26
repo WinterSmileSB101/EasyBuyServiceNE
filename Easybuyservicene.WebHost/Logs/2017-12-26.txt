@@ -14,3 +14,425 @@ Stack Trace:    at Newegg.API.ServiceHost.RestPath.CreateRequest(String pathInfo
   <CategoryName>ERROR</CategoryName>
 </LogEntry>
 **********************************************************************
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>1146f6b4-7c1d-464c-8385-da9a1335cfbc</ID>
+  <Content>Error occured while Processing Service
+ Exception: 
+Date: 2017-12-26 15:49:25:121
+Message: Incorrect syntax near '@Role'.
+&lt;&lt;Connection Name&gt;&gt; : EasyBuyCompany
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;Script Name&gt;&gt; : AddUserInfo
+&lt;&lt;SQL Script&gt;&gt; : INSERT INTO [dbo].[User]
+   ([UserID]
+   ,[UserName]
+   ,[UserPassWord]
+   ,[Email]
+   ,[Phone]
+   ,[lastChangeUserNameDate]
+   ,[Role]
+   ,[InDate]
+   ,[InUser]
+   ,[LastEditDate]
+   ,[lastEditUser])
+VALUES
+  (
+  @UserID,
+  @UserName,
+  @UserPassWord,
+  @Email,
+  @Phone,
+  DATEADD(m,-3,GETDATE())
+  @Role,
+  GETDATE(),
+  @InUser,
+  GETDATE(),
+  @InUser
+  )
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;UserName&gt;az8g&lt;/UserName&gt;
+  &lt;UserPassWord&gt;9627191063&lt;/UserPassWord&gt;
+  &lt;Email&gt;Alvin.X.Zhang@newegg.com&lt;/Email&gt;
+  &lt;Phone&gt;12345678910&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;InUser&gt;az8g&lt;/InUser&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+&lt;/UserDTO&gt;.
+Uri: /api/user.
+Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataCommandException.
+Source: Newegg.Oversea.DataAccess.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\dfdfb248\006207b8_2ad5d201\Newegg.Oversea.DataAccess.dll.
+Stack Trace:    at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter)
+   at Easybuyservicene.Service.DataAccess.UserDA.AddUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 79
+   at Easybuyservicene.Service.Bizs.UserBiz.AddUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Bizs\UserBiz.cs:line 26
+   at Easybuyservicene.Service.Services.User.UserService.OnPut(UserDTO request) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Services\User\UserService.cs:line 39
+   at Newegg.API.Interfaces.RestServiceBase`1.Put(TRequest request).
+
+Inner Exception:
+	Message: Incorrect syntax near '@Role'.
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;SQL Script&gt;&gt; : INSERT INTO [dbo].[User]
+   ([UserID]
+   ,[UserName]
+   ,[UserPassWord]
+   ,[Email]
+   ,[Phone]
+   ,[lastChangeUserNameDate]
+   ,[Role]
+   ,[InDate]
+   ,[InUser]
+   ,[LastEditDate]
+   ,[lastEditUser])
+VALUES
+  (
+  @UserID,
+  @UserName,
+  @UserPassWord,
+  @Email,
+  @Phone,
+  DATEADD(m,-3,GETDATE())
+  @Role,
+  GETDATE(),
+  @InUser,
+  GETDATE(),
+  @InUser
+  )
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;UserName&gt;az8g&lt;/UserName&gt;
+  &lt;UserPassWord&gt;9627191063&lt;/UserPassWord&gt;
+  &lt;Email&gt;Alvin.X.Zhang@newegg.com&lt;/Email&gt;
+  &lt;Phone&gt;12345678910&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;InUser&gt;az8g&lt;/InUser&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+&lt;/UserDTO&gt;. 
+	Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataAccessException.
+	Source: Newegg.Oversea.DataAccess.
+	Stack Trace:    at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters)
+   at CallSite.Target(Closure , CallSite , Type , String , CommandType , String , Int32 , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute6[T0,T1,T2,T3,T4,T5,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+   at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter).
+
+Inner Exception:
+	Message: Incorrect syntax near '@Role'.. 
+	Exception Type: System.Data.SqlClient.SqlException.
+	Source: .Net SqlClient Data Provider.
+	Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Newegg.Oversea.DataAccess.SqlMapper.ExecuteCommand(IDbConnection cnn, IDbTransaction transaction, String sql, Action`2 paramReader, Object obj, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Newegg.Oversea.DataAccess.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at CallSite.Target(Closure , CallSite , Type , DbConnection , String , Object , Object , Int32 , CommandType )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute7[T0,T1,T2,T3,T4,T5,T6,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
+   at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>5fbdf810-9fdd-4037-99bb-fa6bdcc681cb</ID>
+  <Content>Error occured while Processing Service
+ Exception: 
+Date: 2017-12-26 15:51:26:444
+Message: Cannot insert the value NULL into column 'LastChangeUserNameDate', table 'EasyBuy.dbo.User'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+&lt;&lt;Connection Name&gt;&gt; : EasyBuyCompany
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;Script Name&gt;&gt; : AlterUserName
+&lt;&lt;SQL Script&gt;&gt; : UPDATE [dbo].[User] 
+   SET [UserName] = @UserName   
+      ,[UserPassWord]=@UserPassWord
+      ,[Email]=@Email
+      ,[Phone]=@Phone
+      ,[lastChangeUserNameDate]=@lastChangeUserNameDate
+      ,[Role]=@Role
+      ,[LastEditDate]=GETDATE()
+      ,[LastEditUser]=@LastEditUser
+WHERE  [UserID] = @UserID AND DATEDIFF(m,[lastChangeUserNameDate],GETDATE()) &gt;= 3
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;UserName&gt;az8g&lt;/UserName&gt;
+  &lt;UserPassWord&gt;9627191063&lt;/UserPassWord&gt;
+  &lt;Email&gt;Alvin.X.Zhang@newegg.com&lt;/Email&gt;
+  &lt;Phone&gt;12345678910&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;InUser&gt;az8g&lt;/InUser&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+&lt;/UserDTO&gt;.
+Uri: /api/user.
+Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataCommandException.
+Source: Newegg.Oversea.DataAccess.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\dfdfb248\006207b8_2ad5d201\Newegg.Oversea.DataAccess.dll.
+Stack Trace:    at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter)
+   at Easybuyservicene.Service.DataAccess.UserDA.AlterUserInfo(UserDTO dto, String commandName) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 132
+   at Easybuyservicene.Service.DataAccess.UserDA.AlterUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 123
+   at Easybuyservicene.Service.Bizs.UserBiz.AlterUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Bizs\UserBiz.cs:line 21
+   at Easybuyservicene.Service.Services.User.UserService.OnPost(UserDTO request) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Services\User\UserService.cs:line 30
+   at Newegg.API.Interfaces.RestServiceBase`1.Post(TRequest request).
+
+Inner Exception:
+	Message: Cannot insert the value NULL into column 'LastChangeUserNameDate', table 'EasyBuy.dbo.User'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;SQL Script&gt;&gt; : UPDATE [dbo].[User] 
+   SET [UserName] = @UserName   
+      ,[UserPassWord]=@UserPassWord
+      ,[Email]=@Email
+      ,[Phone]=@Phone
+      ,[lastChangeUserNameDate]=@lastChangeUserNameDate
+      ,[Role]=@Role
+      ,[LastEditDate]=GETDATE()
+      ,[LastEditUser]=@LastEditUser
+WHERE  [UserID] = @UserID AND DATEDIFF(m,[lastChangeUserNameDate],GETDATE()) &gt;= 3
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;UserName&gt;az8g&lt;/UserName&gt;
+  &lt;UserPassWord&gt;9627191063&lt;/UserPassWord&gt;
+  &lt;Email&gt;Alvin.X.Zhang@newegg.com&lt;/Email&gt;
+  &lt;Phone&gt;12345678910&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;InUser&gt;az8g&lt;/InUser&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+&lt;/UserDTO&gt;. 
+	Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataAccessException.
+	Source: Newegg.Oversea.DataAccess.
+	Stack Trace:    at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters)
+   at CallSite.Target(Closure , CallSite , Type , String , CommandType , String , Int32 , Object )
+   at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter).
+
+Inner Exception:
+	Message: Cannot insert the value NULL into column 'LastChangeUserNameDate', table 'EasyBuy.dbo.User'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.. 
+	Exception Type: System.Data.SqlClient.SqlException.
+	Source: .Net SqlClient Data Provider.
+	Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Newegg.Oversea.DataAccess.SqlMapper.ExecuteCommand(IDbConnection cnn, IDbTransaction transaction, String sql, Action`2 paramReader, Object obj, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Newegg.Oversea.DataAccess.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at CallSite.Target(Closure , CallSite , Type , DbConnection , String , Object , Object , Int32 , CommandType )
+   at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>83a39092-6341-41d7-b9ef-8293ee311c89</ID>
+  <Content>Error occured while Processing Service
+ Exception: 
+Date: 2017-12-26 15:52:02:839
+Message: Cannot insert the value NULL into column 'LastEditUser', table 'EasyBuy.dbo.User'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+&lt;&lt;Connection Name&gt;&gt; : EasyBuyCompany
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;Script Name&gt;&gt; : AlterUserName
+&lt;&lt;SQL Script&gt;&gt; : UPDATE [dbo].[User] 
+   SET [UserName] = @UserName   
+      ,[UserPassWord]=@UserPassWord
+      ,[Email]=@Email
+      ,[Phone]=@Phone
+      ,[lastChangeUserNameDate]=GETDATE()
+      ,[Role]=@Role
+      ,[LastEditDate]=GETDATE()
+      ,[LastEditUser]=@LastEditUser
+WHERE  [UserID] = @UserID AND DATEDIFF(m,[lastChangeUserNameDate],GETDATE()) &gt;= 3
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;UserName&gt;az9g&lt;/UserName&gt;
+  &lt;UserPassWord&gt;9627191063&lt;/UserPassWord&gt;
+  &lt;Email&gt;Alvin.X.Zhang@newegg.com&lt;/Email&gt;
+  &lt;Phone&gt;12345678910&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;InUser&gt;az8g&lt;/InUser&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+&lt;/UserDTO&gt;.
+Uri: /api/user.
+Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataCommandException.
+Source: Newegg.Oversea.DataAccess.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\dfdfb248\006207b8_2ad5d201\Newegg.Oversea.DataAccess.dll.
+Stack Trace:    at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter)
+   at Easybuyservicene.Service.DataAccess.UserDA.AlterUserInfo(UserDTO dto, String commandName) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 132
+   at Easybuyservicene.Service.DataAccess.UserDA.AlterUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 123
+   at Easybuyservicene.Service.Bizs.UserBiz.AlterUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Bizs\UserBiz.cs:line 21
+   at Easybuyservicene.Service.Services.User.UserService.OnPost(UserDTO request) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Services\User\UserService.cs:line 30
+   at Newegg.API.Interfaces.RestServiceBase`1.Post(TRequest request).
+
+Inner Exception:
+	Message: Cannot insert the value NULL into column 'LastEditUser', table 'EasyBuy.dbo.User'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;SQL Script&gt;&gt; : UPDATE [dbo].[User] 
+   SET [UserName] = @UserName   
+      ,[UserPassWord]=@UserPassWord
+      ,[Email]=@Email
+      ,[Phone]=@Phone
+      ,[lastChangeUserNameDate]=GETDATE()
+      ,[Role]=@Role
+      ,[LastEditDate]=GETDATE()
+      ,[LastEditUser]=@LastEditUser
+WHERE  [UserID] = @UserID AND DATEDIFF(m,[lastChangeUserNameDate],GETDATE()) &gt;= 3
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;UserName&gt;az9g&lt;/UserName&gt;
+  &lt;UserPassWord&gt;9627191063&lt;/UserPassWord&gt;
+  &lt;Email&gt;Alvin.X.Zhang@newegg.com&lt;/Email&gt;
+  &lt;Phone&gt;12345678910&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;InUser&gt;az8g&lt;/InUser&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+&lt;/UserDTO&gt;. 
+	Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataAccessException.
+	Source: Newegg.Oversea.DataAccess.
+	Stack Trace:    at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters)
+   at CallSite.Target(Closure , CallSite , Type , String , CommandType , String , Int32 , Object )
+   at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter).
+
+Inner Exception:
+	Message: Cannot insert the value NULL into column 'LastEditUser', table 'EasyBuy.dbo.User'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.. 
+	Exception Type: System.Data.SqlClient.SqlException.
+	Source: .Net SqlClient Data Provider.
+	Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Newegg.Oversea.DataAccess.SqlMapper.ExecuteCommand(IDbConnection cnn, IDbTransaction transaction, String sql, Action`2 paramReader, Object obj, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Newegg.Oversea.DataAccess.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at CallSite.Target(Closure , CallSite , Type , DbConnection , String , Object , Object , Int32 , CommandType )
+   at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>c71f635b-e23d-4dc9-a50b-872807e2b43b</ID>
+  <Content>Error occured while Processing Service
+ Exception: 
+Date: 2017-12-26 15:54:06:682
+Message: String or binary data would be truncated.
+The statement has been terminated.
+&lt;&lt;Connection Name&gt;&gt; : EasyBuyCompany
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;Script Name&gt;&gt; : AlterUserPhone
+&lt;&lt;SQL Script&gt;&gt; : UPDATE [dbo].[User] 
+   SET [Phone]=@Phone
+      ,[LastEditDate]=GETDATE()
+      ,[LastEditUser]=@LastEditUser
+WHERE  [UserID] = @UserID
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;Phone&gt;1234567891011&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+  &lt;LastEditUser&gt;az8g&lt;/LastEditUser&gt;
+&lt;/UserDTO&gt;.
+Uri: /api/user.
+Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataCommandException.
+Source: Newegg.Oversea.DataAccess.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\dfdfb248\006207b8_2ad5d201\Newegg.Oversea.DataAccess.dll.
+Stack Trace:    at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter)
+   at Easybuyservicene.Service.DataAccess.UserDA.AlterUserInfo(UserDTO dto, String commandName) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 132
+   at Easybuyservicene.Service.DataAccess.UserDA.AlterUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\DataAccess\UserDA.cs:line 123
+   at Easybuyservicene.Service.Bizs.UserBiz.AlterUserInfo(UserDTO dto) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Bizs\UserBiz.cs:line 21
+   at Easybuyservicene.Service.Services.User.UserService.OnPost(UserDTO request) in D:\Alvin\PersonalProjects\School\EasyBuyServiceNE\Easybuyservicene.Service\Services\User\UserService.cs:line 30
+   at Newegg.API.Interfaces.RestServiceBase`1.Post(TRequest request).
+
+Inner Exception:
+	Message: String or binary data would be truncated.
+The statement has been terminated.
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;SQL Script&gt;&gt; : UPDATE [dbo].[User] 
+   SET [Phone]=@Phone
+      ,[LastEditDate]=GETDATE()
+      ,[LastEditUser]=@LastEditUser
+WHERE  [UserID] = @UserID
+&lt;&lt;SQL Parameter(s)&gt;&gt; :
+&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;UserDTO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserID&gt;9SIA24G6BZ5991&lt;/UserID&gt;
+  &lt;Phone&gt;1234567891011&lt;/Phone&gt;
+  &lt;LastChangeUserNameDate xsi:nil="true" /&gt;
+  &lt;Role&gt;00000&lt;/Role&gt;
+  &lt;InDate xsi:nil="true" /&gt;
+  &lt;LastEditDate xsi:nil="true" /&gt;
+  &lt;LastEditUser&gt;az8g&lt;/LastEditUser&gt;
+&lt;/UserDTO&gt;. 
+	Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataAccessException.
+	Source: Newegg.Oversea.DataAccess.
+	Stack Trace:    at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters)
+   at CallSite.Target(Closure , CallSite , Type , String , CommandType , String , Int32 , Object )
+   at Newegg.Oversea.DataAccess.DataCommand.ExecuteNonQuery(Object parameter).
+
+Inner Exception:
+	Message: String or binary data would be truncated.
+The statement has been terminated.. 
+	Exception Type: System.Data.SqlClient.SqlException.
+	Source: .Net SqlClient Data Provider.
+	Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Newegg.Oversea.DataAccess.SqlMapper.ExecuteCommand(IDbConnection cnn, IDbTransaction transaction, String sql, Action`2 paramReader, Object obj, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Newegg.Oversea.DataAccess.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at CallSite.Target(Closure , CallSite , Type , DbConnection , String , Object , Object , Int32 , CommandType )
+   at Newegg.Oversea.DataAccess.DbHelper.ExecuteNonQuery(String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************

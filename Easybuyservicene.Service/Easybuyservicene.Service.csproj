@@ -59,19 +59,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bizs\UserAddressBiz.cs" />
     <Compile Include="Bizs\UserBiz.cs" />
+    <Compile Include="DataAccess\UserAddressDA.cs" />
     <Compile Include="DataAccess\UserDA.cs" />
     <Compile Include="Dtos\BaseDTO.cs" />
     <Compile Include="Dtos\QueryRequestDTO.cs" />
     <Compile Include="Dtos\QueryResponseDTO.cs" />
+    <Compile Include="Dtos\User\UserAddressDTO.cs" />
     <Compile Include="Dtos\User\UserDTO.cs" />
     <Compile Include="Dtos\Version.cs" />
+    <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\Static\ResponseStaticModel.cs" />
+    <Compile Include="Model\UserAddressModel.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ModuleServiceBases.cs" />
+    <Compile Include="Services\User\UserAddressService.cs" />
     <Compile Include="Services\User\UserService.cs" />
     <Compile Include="Services\VersionService.cs" />
+    <Compile Include="Utilis\ServiceUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

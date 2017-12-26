@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Easybuyservicene.Service.Dtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,29 @@ namespace Easybuyservicene.Service.Model.Static
             public const string FAILED = "FAILED";
             public const string SERVER_ERROR = "SERVERERROR";
         }
+
+        public static QueryResponseDTO<string> SUCCESS_MODEL = new QueryResponseDTO<string>
+        {
+            Code = Code.OK,
+            Message = Message.OK
+        };
+
+        public static QueryResponseDTO<string> FAILED_MODEL = new QueryResponseDTO<string>
+        {
+            Code = Code.FAILED,
+            Message = Message.FAILED
+        };
+
+        public static QueryResponseDTO<string> PARAM_ERROR_MODEL = new QueryResponseDTO<string>
+        {
+            Code = Code.PARAM_ERROR,
+            Message = Message.PARAM_ERROR
+        };
+
+        public static QueryResponseDTO<string> SERVER_ERROR_MODEL = new QueryResponseDTO<string>
+        {
+            Code = Code.SERVER_ERROR,
+            Message = Message.SERVER_ERROR
+        };
     }
 }

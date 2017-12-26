@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Easybuyservicene.Service.Model
 {
-    public class UserModel
+    public class UserModel: BaseModel
     {
         public string UserID { get; set; }
         public string UserName { get; set; }
@@ -14,9 +14,6 @@ namespace Easybuyservicene.Service.Model
         public string Phone { get; set; }
         public DateTime? LastChangeUserNameDate { get; set; }
         public string Role { get; set; }
-        public DateTime? InDate { get; set; }
-        public string InUser { get; set; }
-        public DateTime? LastEditDate { get; set; }
-        public string LastEditUser { get; set; }
+        public string DefaultAddressID { get; set; }
     }
 }

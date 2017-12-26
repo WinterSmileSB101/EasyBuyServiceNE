@@ -15,5 +15,15 @@ namespace Easybuyservicene.Service.Bizs
         {
             return UserDA.GetUserInfo(dto);
         }
+
+        public static QueryResponseDTO<bool> AlterUserInfo(UserDTO dto)
+        {
+            return UserDA.AlterUserInfo(dto);
+        }
+
+        public static QueryResponseDTO<bool> AddUserInfo(UserDTO dto)
+        {
+            return UserDA.AddUserInfo(dto);
+        }
     }
 }
