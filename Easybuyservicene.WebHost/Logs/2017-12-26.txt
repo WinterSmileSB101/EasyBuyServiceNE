@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>9ff7c9cb-7db4-4fa9-aa3e-212d717172c3</ID>
+  <Content>Error occured while Processing Request: /api/user/1
+ Exception: 
+Message: Could not find property UserID on QueryRequestDTO`1.
+Exception Type: System.ArgumentException.
+Source: Newegg.API.Framework.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\56a29f7f\00e20523_b4e4d201\Newegg.API.Framework.dll.
+Stack Trace:    at Newegg.API.ServiceHost.RestPath.CreateRequest(String pathInfo, Dictionary`2 queryStringAndFormData, Object fromInstance)
+   at Newegg.API.HttpHandlers.RestHandler.GetRequest(HttpRequestWrapper httpReq, RestPath restPath)
+   at Newegg.API.HttpHandlers.RestHandler.ProcessRequest(HttpRequestWrapper httpReq, HttpResponseWrapper httpRes, String operationName).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************
