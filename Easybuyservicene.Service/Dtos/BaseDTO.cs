@@ -16,6 +16,8 @@ namespace Easybuyservicene.Service.Dtos
 
         public string LastEditUser { get; set; }
 
+        public string ActionType { get; set; }
+
         public PagingInfoEntity PagingInfo { get; set; }
     }
 }

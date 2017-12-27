@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>3f79b4ab-95ff-41bf-9366-7b2e22b2e9f2</ID>
+  <Content>Error occured while Processing Service
+ Exception: 
+Date: 2017-12-27 21:31:01:882
+Message: Invalid object name 'dbo.EC_NFHomepage'.
+&lt;&lt;Connection Name&gt;&gt; : EasyBuyCompany
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;Script Name&gt;&gt; : TestTable
+&lt;&lt;SQL Script&gt;&gt; : SELECT [ID]
+      ,[Bullertdes]
+FROM [dbo].[EC_NFHomepage]
+.
+Uri: /api/test.
+Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataCommandException.
+Source: Newegg.Oversea.DataAccess.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\dfdfb248\006207b8_2ad5d201\Newegg.Oversea.DataAccess.dll.
+Stack Trace:    at Newegg.Oversea.DataAccess.DataCommand.ExecuteEntityList[T](Object parameter)
+   at Easybuyservicene.Service.Services.Test.TestService.OnGet(TestDTO request)
+   at Newegg.API.Interfaces.RestServiceBase`1.Get(TRequest request).
+
+Inner Exception:
+	Message: Invalid object name 'dbo.EC_NFHomepage'.
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;SQL Script&gt;&gt; : SELECT [ID]
+      ,[Bullertdes]
+FROM [dbo].[EC_NFHomepage]
+. 
+	Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataAccessException.
+	Source: Newegg.Oversea.DataAccess.
+	Stack Trace:    at Newegg.Oversea.DataAccess.DbHelper.ExecuteEntity[T](String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute6[T0,T1,T2,T3,T4,T5,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
+   at Newegg.Oversea.DataAccess.DataCommand.ExecuteEntityList[T](Object parameter).
+
+Inner Exception:
+	Message: Invalid object name 'dbo.EC_NFHomepage'.. 
+	Exception Type: System.Data.SqlClient.SqlException.
+	Source: .Net SqlClient Data Provider.
+	Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Newegg.Oversea.DataAccess.SqlMapper.&lt;QueryInternal&gt;d__31`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Newegg.Oversea.DataAccess.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute8[T0,T1,T2,T3,T4,T5,T6,T7,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
+   at Newegg.Oversea.DataAccess.DbHelper.ExecuteEntity[T](String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************
+<?xml version="1.0" encoding="utf-16"?>
+<LogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>29a93f2e-8e42-4e3b-8667-659e11815ef5</ID>
+  <Content>Error occured while Processing Service
+ Exception: 
+Date: 2017-12-27 21:32:00:796
+Message: Invalid object name 'dbo.EC_NFHomepage'.
+&lt;&lt;Connection Name&gt;&gt; : EasyBuyCompany
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;Script Name&gt;&gt; : TestTable
+&lt;&lt;SQL Script&gt;&gt; : SELECT [ID]
+      ,[Bullertdes]
+FROM [dbo].[EC_NFHomepage]
+.
+Uri: /api/test.
+Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataCommandException.
+Source: Newegg.Oversea.DataAccess.
+Module Name: C:\Users\az8g\AppData\Local\Temp\Temporary ASP.NET Files\vs\ef1b3346\dd68df26\assembly\dl3\dfdfb248\006207b8_2ad5d201\Newegg.Oversea.DataAccess.dll.
+Stack Trace:    at Newegg.Oversea.DataAccess.DataCommand.ExecuteEntityList[T](Object parameter)
+   at Easybuyservicene.Service.Services.Test.TestService.OnGet(TestDTO request)
+   at Newegg.API.Interfaces.RestServiceBase`1.Get(TRequest request).
+
+Inner Exception:
+	Message: Invalid object name 'dbo.EC_NFHomepage'.
+&lt;&lt;Connection String&gt;&gt; : data source=MISDBS101\S7OVSDB04;database=EasyBuy;user id=misa;password=abs906egg;connection reset=false;Timeout=30;connection lifetime=30; min pool size=0; max pool size=50
+&lt;&lt;SQL Script&gt;&gt; : SELECT [ID]
+      ,[Bullertdes]
+FROM [dbo].[EC_NFHomepage]
+. 
+	Exception Type: Newegg.Oversea.DataAccess.DbProvider.DataAccessException.
+	Source: Newegg.Oversea.DataAccess.
+	Stack Trace:    at Newegg.Oversea.DataAccess.DbHelper.ExecuteEntity[T](String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters)
+   at Newegg.Oversea.DataAccess.DataCommand.ExecuteEntityList[T](Object parameter).
+
+Inner Exception:
+	Message: Invalid object name 'dbo.EC_NFHomepage'.. 
+	Exception Type: System.Data.SqlClient.SqlException.
+	Source: .Net SqlClient Data Provider.
+	Stack Trace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean&amp; dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task&amp; task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at Newegg.Oversea.DataAccess.SqlMapper.&lt;QueryInternal&gt;d__31`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Newegg.Oversea.DataAccess.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Newegg.Oversea.DataAccess.DbHelper.ExecuteEntity[T](String databaseName, CommandType cmdType, String cmdText, Int32 timeout, Object commandParameters).
+</Content>
+  <CategoryName>ERROR</CategoryName>
+</LogEntry>
+**********************************************************************
