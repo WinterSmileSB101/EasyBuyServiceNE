@@ -15,10 +15,15 @@ namespace Easybuyservicene.Service.Services.Test
             var dataCommand = DataCommandManager.GetDataCommand("TestTable");
             var testTable = dataCommand.ExecuteEntityList<TestDTO>();
 
-            var bulletDescription = testTable[1].Bullertdes;
+            foreach (var item in testTable)
+            {
+                var bulletDescription = "a\rb\rc";
 
-            var text = bulletDescription.Trim().Split(new string[] { "\r" }, StringSplitOptions.RemoveEmptyEntries);
-            var textNeweggCom = Regex.Split(bulletDescription, @"\r\n");
+                var text = bulletDescription.Trim().Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                var textEditor = bulletDescription.Trim().Split(new string[] { "\r\n\t", "\t\r\n","\r\n","\r","\n" }, StringSplitOptions.RemoveEmptyEntries);
+                var textNeweggCom = Regex.Split(bulletDescription, @"\r\n");
+            }
+            
             return base.OnGet(request);
         }
     }
