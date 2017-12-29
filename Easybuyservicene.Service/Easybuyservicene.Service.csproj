@@ -86,6 +86,7 @@
     <Compile Include="Dtos\Version.cs" />
     <Compile Include="Model\AttributeModel.cs" />
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\ProductAttributeModel.cs" />
     <Compile Include="Model\ProductModel.cs" />
     <Compile Include="Model\ReviewModel.cs" />
     <Compile Include="Model\ShoppingCartModel.cs" />
