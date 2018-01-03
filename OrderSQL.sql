@@ -116,6 +116,7 @@ SET NOCOUNT ON;
 		INSERT INTO [EasyBuy].[dbo].[ErrorLog]
            ([Type]
            ,[RowNumber]
+			,[TransactionNumber]
            ,[Description]
            ,[Level]
            ,[InDate]
@@ -125,6 +126,7 @@ SET NOCOUNT ON;
 		 VALUES
 			   (1
 			   ,ERROR_NUMBER()
+				,''
 			   ,ERROR_MESSAGE()
 			   ,1
 			   ,GETDATE()

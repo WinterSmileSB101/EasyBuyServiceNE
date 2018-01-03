@@ -51,6 +51,7 @@ DECLARE @NeedCount INT;
 		INSERT INTO [EasyBuy].[dbo].[ErrorLog]
            ([Type]
            ,[RowNumber]
+			,[TransactionNumber]
            ,[Description]
            ,[Level]
            ,[InDate]
@@ -60,6 +61,7 @@ DECLARE @NeedCount INT;
 		 VALUES
 			   (1
 			   ,ERROR_NUMBER()
+				,@TransactionNumber
 			   ,ERROR_MESSAGE()
 			   ,1
 			   ,GETDATE()
